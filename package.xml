@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>pybind11_example</name>
+  <version>0.0.1</version>
+  <description>The hello world package</description>
+
+  <maintainer email="amiller89@gmx.de">amiller</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>pybind11_catkin</build_depend>
+
+  <run_depend>pybind11_catkin</run_depend>
+
+</package>
