@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>pybind11_example</name>
+  <name>function_call</name>
   <version>0.0.1</version>
   <description>The function_call package</description>
 
