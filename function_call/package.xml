@@ -2,7 +2,7 @@
 <package>
   <name>pybind11_example</name>
   <version>0.0.1</version>
-  <description>The hello world package</description>
+  <description>The function_call package</description>
 
   <maintainer email="amiller89@gmx.de">amiller</maintainer>
 
