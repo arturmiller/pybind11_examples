@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
-from example import add
+from logger import cpp_print
 
 
 if __name__ == '__main__':
-    res = add(5, 3) # here the C++ function is called
-    print('hello world, 5 + 3 = {}'.format(res))
+    cpp_print("hello world!") # here the C++ function is called

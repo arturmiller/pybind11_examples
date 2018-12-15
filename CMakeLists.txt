@@ -11,4 +11,4 @@ catkin_package(
 
 include_directories(${catkin_INCLUDE_DIRS})
 
-pybind_add_module(example MODULE src/example.cpp)
+pybind_add_module(logger MODULE src/logger.cpp)
