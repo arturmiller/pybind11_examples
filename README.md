@@ -2,9 +2,9 @@
 This repository shows two minimal pybind11 examples using catkin. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) catkin package. Having a catkin package is very convenient if you are using catkin as build system.
 
 ## Installation
-1. [Create a catkin workspace](https://catkin-tools.readthedocs.io/en/latest/quick_start.html#initializing-a-new-workspace) or use an existing workspace.
-2. Clone this repository into the ```src/``` subdirectory of the workspace: ``git clone https://github.com/arturmiller/pybind11_examples.git``.
-3. Clone the project [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin) int the ```src/``` subdirectory: ``git clone https://github.com/ipab-slmc/pybind11_catkin``. 
+1. Install the package [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin) with ```sudo apt-get install ros-kinetic-pybind11-catkin```
+2. [Create a catkin workspace](https://catkin-tools.readthedocs.io/en/latest/quick_start.html#initializing-a-new-workspace) or use an existing workspace.
+3. Clone this repository into the ```src/``` subdirectory of the workspace: ``git clone https://github.com/arturmiller/pybind11_examples.git``.
 4. Compile the code ```catkin build```.
 5. Source the config file: ```source path_to_workspace/devel/setup.bash```.
 
