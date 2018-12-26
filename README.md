@@ -1,5 +1,5 @@
 # pybind11_examples
-This repository shows two minimal pybind11 examples using catkin. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) catkin package. Having a catkin package is very convenient if you are using catkin as build system.
+This repository shows minimal pybind11 examples using catkin. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) catkin package. Having a catkin package is very convenient if you are using catkin as build system.
 
 ## Installation
 1. Install the package [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin) with ```sudo apt-get install ros-kinetic-pybind11-catkin```
