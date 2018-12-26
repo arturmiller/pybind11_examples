@@ -33,4 +33,4 @@ The following classes are part of the plugin system:
 - PluginWrapper: The PluginWrapper calls the Python Plugin.
 - PyBasePlugin: This module makes the base plugin accessible in Python.  
 
-Run this example with ```rosrun plugin plugin_runner```. The Python plugin is called multiple time, with the resulting output ```hello world!```. Now you can change the string of the print statement and rerun it without recompiling the source code.
+Run this example with ```rosrun plugin plugin_runner```. The Python plugin is called, with the resulting output ```hello world!```. Now you can change the string of the print statement and rerun it without recompiling the source code.
