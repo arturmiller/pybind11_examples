@@ -1,17 +1,38 @@
 #include <thread>
 #include <chrono>
+#include <list> 
+#include <iterator>
 
 #include "plugin_wrapper.cpp"
 
 
-int main(int argc, char **argv) {
-    PluginWrapper plugin("plugin.custom_plugin", "CustomPlugin");
-
-    for(int i=0; i < 10; i++)
+class PluginRunner{
+public:
+    PluginRunner() { }
+    void add(BasePlugin* plugin)
     {
-        plugin.run();
-        std::this_thread::sleep_for (std::chrono::seconds(1));
+        plugins.push_back(plugin);
     }
+
+    void run()
+    {
+        std::list<BasePlugin*>::iterator plugin = plugins.begin();
+        while(plugin != plugins.end())
+        {
+	        (*plugin)->run();
+            plugin++;
+        }
+    }
+
+private:
+    std::list<BasePlugin*> plugins;
+};
+
+
+int main(int argc, char **argv) {
+    PluginRunner plugin_runner;
+    plugin_runner.add(new PluginWrapper("plugin.custom_plugin", "CustomPlugin"));
+    plugin_runner.run();
 
     return 0;
 }
