@@ -21,7 +21,8 @@ Run it with ```rosrun inheritance dog.py```. You should see something similar to
 ```
 <__main__.Dog object at 0x7f90143954d0>
 Fluffy dog Molly!
-Fluffy dog Charly!```
+Fluffy dog Charly!
+```
 
 ### Plugin
 The last two examples have shown, how to call C++ code from Python. With Pybind11 you can do the inverse as well. This is needed for example if you want to write a plugin written in Python for a C++ library. There are multiple advantages of this approach. For example you can rerun the plugin without recompiling and running a debugger is much simpler.  
