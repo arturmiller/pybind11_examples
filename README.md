@@ -27,10 +27,10 @@ Fluffy dog Charly!
 ### Plugin
 The last two examples have shown, how to call C++ code from Python. With Pybind11 you can do the inverse as well. This is needed for example if you want to write a plugin written in Python for a C++ library. There are multiple advantages of this approach. For example you can rerun the plugin without recompiling and running a debugger is much simpler.  
 The following classes are part of the plugin system:
-- PluginRunner: The plugins are stored and called in this module.
-- BasePlugin: All plugins inherit from BasePlugin.
-- CustomPlugin: A custom plugin implemented in Python.
-- PluginWrapper: The PluginWrapper calls the Python Plugin.
-- PyBasePlugin: This module makes the base plugin accessible in Python.  
+- [PluginRunner](https://github.com/arturmiller/pybind11_examples/blob/master/plugin/src/plugin_runner.cpp): The plugins are stored and called in this module.
+- [BasePlugin](https://github.com/arturmiller/pybind11_examples/blob/master/plugin/src/base_plugin.cpp): All plugins inherit from BasePlugin.
+- [CustomPlugin](https://github.com/arturmiller/pybind11_examples/blob/master/plugin/src/plugin/custom_plugin.py): A custom plugin implemented in Python.
+- [PluginWrapper](https://github.com/arturmiller/pybind11_examples/blob/master/plugin/src/plugin_wrapper.cpp): The PluginWrapper calls the Python Plugin.
+- [PyBasePlugin](https://github.com/arturmiller/pybind11_examples/blob/master/plugin/src/py_base_plugin.cpp): This module makes the base plugin accessible in Python.  
 
 Run this example with ```rosrun plugin plugin_runner```. The Python plugin is called, with the resulting output ```hello world!```. Now you can change the string of the print statement and rerun it without recompiling the source code.
