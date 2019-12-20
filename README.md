@@ -1,4 +1,6 @@
 # pybind11_examples
+[![Build Status](https://travis-ci.org/arturmiller/pybind11_examples.svg?branch=master)](https://travis-ci.org/arturmiller/pybind11_examples)
+
 This repository shows minimal pybind11 examples using catkin. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) catkin package. Having a catkin package is very convenient if you are using catkin as build system.
 
 ## Installation
