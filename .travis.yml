@@ -1,0 +1,18 @@
+dist: xenial
+compiler:
+- gcc
+language: python
+services:
+  - docker
+env:
+  global:
+    - CATKIN_PARALLEL_JOBS='-p1'
+    - ROS_PARALLEL_JOBS='-j1'
+matrix:
+  include:
+    - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=kinetic
+    - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic
+install:
+  - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci
+script:
+  - .industrial_ci/travis.sh
