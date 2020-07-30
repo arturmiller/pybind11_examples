@@ -19,7 +19,7 @@ You run this example with ```rosrun function_call hello_world.py```. As output y
 ### [Basic classes usage](https://github.com/arturmiller/pybind11_examples/tree/master/classes)
 The second example shows how to instantiate and use C++ classes in Python.
 
-Run this example with ```rosrun classes dog.py```. This should be your output:
+Run this example with ```rosrun classes pets.py```. This should be your output:
 ```
 <Dog named 'Bello'>
 Bello

@@ -4,8 +4,6 @@ from dog import Dog, Cat
 
 
 if __name__ == '__main__':
-    help(Dog)
-
     dog = Dog('Bello')
     print(dog)
     # <Dog named 'Bello'>
