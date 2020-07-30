@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 2.8.3)
 project(plugin)
 
 find_package(PythonLibs REQUIRED)
-include_directories(${PYTHON_INCLUDE_DIRS})
 
 find_package(catkin REQUIRED COMPONENTS
     pybind11_catkin)
@@ -14,6 +13,7 @@ catkin_package(
     CATKIN_DEPENDS pybind11_catkin
 )
 
+include_directories(${PYTHON_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 
 add_library(base_plugin SHARED src/base_plugin.cpp)
 
