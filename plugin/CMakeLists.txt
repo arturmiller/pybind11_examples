@@ -22,3 +22,9 @@ pybind_add_module(py_base_plugin MODULE src/py_base_plugin.cpp)
 pybind_add_module(plugin_wrapper SHARED src/plugin_wrapper.cpp )
 add_executable(plugin_runner src/plugin_runner.cpp)
 target_link_libraries(plugin_runner ${PYTHON_LIBRARIES} plugin_wrapper base_plugin)
+
+install(TARGETS plugin_runner
+                py_base_plugin
+  LIBRARY DESTINATION ${PYTHON_INSTALL_DIR}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

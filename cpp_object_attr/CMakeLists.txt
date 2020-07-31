@@ -19,3 +19,9 @@ pybind_add_module(cpp_object MODULE src/cpp_object.cpp)
 pybind_add_module(example SHARED src/example.cpp )
 add_executable(main src/main.cpp)
 target_link_libraries(main ${PYTHON_LIBRARIES} example)
+
+install(TARGETS main
+                cpp_object
+  LIBRARY DESTINATION ${PYTHON_INSTALL_DIR}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

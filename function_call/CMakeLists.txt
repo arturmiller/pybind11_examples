@@ -12,3 +12,10 @@ catkin_package(
 include_directories(${catkin_INCLUDE_DIRS})
 
 pybind_add_module(logger MODULE src/logger.cpp)
+
+catkin_install_python(PROGRAMS scripts/hello_world.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+install(TARGETS logger
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

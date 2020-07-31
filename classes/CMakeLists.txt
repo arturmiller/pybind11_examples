@@ -12,3 +12,10 @@ catkin_package(
 include_directories(${catkin_INCLUDE_DIRS})
 
 pybind_add_module(dog MODULE src/dog.cpp)
+
+catkin_install_python(PROGRAMS scripts/pets.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+install(TARGETS dog
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
