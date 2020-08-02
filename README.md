@@ -1,14 +1,23 @@
 # pybind11_examples
 [![Build Status](https://travis-ci.org/arturmiller/pybind11_examples.svg?branch=master)](https://travis-ci.org/arturmiller/pybind11_examples)
 
-This repository shows minimal pybind11 examples using catkin. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) catkin package. Having a catkin package is very convenient if you are using catkin as build system.
+This repository shows minimal pybind11 using ROS. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) wrapper for ROS packages. Despite its name pybind11_catkin can be used in combination with catkin as well as with colcon.
 
 ## Installation
-1. Install the package [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin) with ```sudo apt-get install ros-kinetic-pybind11-catkin```
-2. [Create a catkin workspace](https://catkin-tools.readthedocs.io/en/latest/quick_start.html#initializing-a-new-workspace) or use an existing workspace.
-3. Clone this repository into the ```src/``` subdirectory of the workspace: ``git clone https://github.com/arturmiller/pybind11_examples.git``.
-4. Compile the code ```catkin build```.
-5. Source the config file: ```source path_to_workspace/devel/setup.bash```.
+### Install prerequisites
+This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). You can install it with ```sudo apt-get install ros-<distro>-pybind11-catkin```. Depending on the ROS distribution ```<distro>``` is ```kinetic```, ```melodic``` or ```noetic```.
+
+### Build with catkin tools
+1. [Create a catkin workspace](https://catkin-tools.readthedocs.io/en/latest/quick_start.html#initializing-a-new-workspace) or use an existing workspace.
+2. Clone this repository into the ```src/``` subdirectory of the workspace: ``git clone https://github.com/arturmiller/pybind11_examples.git``.
+3. Compile the code ```catkin build```.
+4. Source the config file: ```source path_to_workspace/devel/setup.bash```.
+
+### Build with colcon
+1. [Create a colcon workspace](https://index.ros.org/doc/ros2/Tutorials/Colcon-Tutorial/#create-a-workspace) or use an existing workspace.
+2. Clone this repository into the ```src/``` subdirectory of the workspace: ``git clone https://github.com/arturmiller/pybind11_examples.git``.
+3. Compile the code ```colcon build```.
+4. Source the config file: ```source path_to_workspace/install/setup.bash```.
 
 ## Examples
 
