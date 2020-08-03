@@ -1,6 +1,4 @@
+#include <plugin/base_plugin.h>
 
-class BasePlugin{
-public:
-    BasePlugin() { }
-    virtual void run() = 0;
-};
+
+BasePlugin::BasePlugin() { }

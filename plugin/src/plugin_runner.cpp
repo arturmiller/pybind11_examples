@@ -1,32 +1,25 @@
-#include <thread>
-#include <chrono>
-#include <list> 
 #include <iterator>
 
-#include "plugin_wrapper.cpp"
+#include <plugin/plugin_runner.h>
+#include <plugin/plugin_wrapper.h>
 
 
-class PluginRunner{
-public:
-    PluginRunner() { }
-    void add(BasePlugin* plugin)
+PluginRunner::PluginRunner() { }
+
+void PluginRunner::add(BasePlugin* plugin)
+{
+    plugins.push_back(plugin);
+}
+
+void PluginRunner::run()
+{
+    std::list<BasePlugin*>::iterator plugin = plugins.begin();
+    while(plugin != plugins.end())
     {
-        plugins.push_back(plugin);
+        (*plugin)->run();
+        plugin++;
     }
-
-    void run()
-    {
-        std::list<BasePlugin*>::iterator plugin = plugins.begin();
-        while(plugin != plugins.end())
-        {
-	        (*plugin)->run();
-            plugin++;
-        }
-    }
-
-private:
-    std::list<BasePlugin*> plugins;
-};
+}
 
 
 int main(int argc, char **argv) {
@@ -36,4 +29,3 @@ int main(int argc, char **argv) {
 
     return 0;
 }
-

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
+from cat import Cat
+from dog import Dog
 
-from dog import Dog, Cat
 
 
 if __name__ == '__main__':

@@ -9,7 +9,8 @@ catkin_package(
     CATKIN_DEPENDS pybind11_catkin
 )
 
-include_directories(${catkin_INCLUDE_DIRS})
+include_directories(${PROJECT_SOURCE_DIR}/include
+                    ${catkin_INCLUDE_DIRS})
 
 pybind_add_module(pet MODULE src/pet.cpp)
 

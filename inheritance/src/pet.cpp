@@ -1,17 +1,14 @@
-#include <string>
 #include <pybind11/pybind11.h>
 
+#include <inheritance/pet.h>
 
-class Pet {
-public:
-    Pet(const std::string &name) : name(name) { }
-    virtual std::string decorateName(const std::string name) = 0;
-    void setName(const std::string &name) { this->name = name; }
-    std::string getName() { return decorateName(name); }
 
-private:
-    std::string name;
-};
+Pet::Pet(const std::string &name) : name(name) { }
+
+void Pet::setName(const std::string &name) { this->name = name; }
+
+std::string Pet::getName() { return decorateName(name); }
+
 
 namespace py = pybind11;
 
