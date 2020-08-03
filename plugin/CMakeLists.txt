@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(plugin)
-add_compile_options(-Wno-attributes)
+add_compile_options(-Wno-attributes -std=c++11)
 
 find_package(PythonLibs REQUIRED)
 
