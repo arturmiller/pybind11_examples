@@ -1,5 +1,5 @@
 # pybind11_examples
-[![Build Status](https://travis-ci.org/arturmiller/pybind11_examples.svg?branch=master)](https://travis-ci.org/arturmiller/pybind11_examples)
+[![CI](https://github.com/arturmiller/pybind11_examples/actions/workflows/ci.yaml/badge.svg)](https://github.com/arturmiller/pybind11_examples/actions/workflows/ci.yaml)
 
 This repository shows minimal pybind11 using ROS. This project depends on [pybind11_catkin](https://github.com/ipab-slmc/pybind11_catkin). It is a [pybind11](https://github.com/pybind/pybind11) wrapper for ROS packages. Despite its name pybind11_catkin can be used in combination with catkin as well as with colcon.
 
